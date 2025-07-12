@@ -1,0 +1,41 @@
+class Solution {
+  public:
+    int nonLisMaxSum(vector<int>& arr) {
+        // code here
+        int n = arr.size() ;
+        vector<int> dp(n , 1) ;
+        vector<int> sum(n) ;
+        for(int i =0 ; i< n ; i++){
+            sum[i] = arr[i] ;
+        }
+        
+        for(int i =0 ; i< n ; i++){
+            for(int prev = 0 ; prev < i ; prev++){
+                if(arr[prev] < arr[i]){
+                    if(dp[i] < 1 + dp[prev]){
+                        dp[i] = 1 + dp[prev] ;
+                        sum[i] = sum[prev] + arr[i] ;  
+                    }
+                    else if(dp[i] == 1 + dp[prev]){
+                        sum[i] = min(sum[i] , sum[prev] + arr[i]) ;
+                    }
+                }
+            }
+        }
+        
+        int maxi = INT_MIN ;
+        int maxval = INT_MAX ;
+        
+        for(int i =0 ; i< n ; i++){
+            if(dp[i] > maxi){
+                maxi = dp[i] ;
+                maxval = sum[i] ;
+            }
+            else if(dp[i] == maxi){
+                maxval = min(maxval , sum[i]) ;
+            }
+        }
+        int total = accumulate(arr.begin() , arr.end() ,0) ;
+        return total - maxval ;
+    }
+};
