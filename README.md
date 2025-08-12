@@ -52,6 +52,5 @@ GitHub Issues - Report issues or suggest improvements.
 
 License
 This repository is licensed under the MIT License. Feel free to use the solutions for learning and reference.
-Contact
-For any questions or suggestions, feel free to open an issue or reach out via your-email@example.com.
+
 Happy coding! 🚀
