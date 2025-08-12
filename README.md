@@ -7,24 +7,6 @@ Store and organize solutions to coding problems from LeetCode and GFG.
 Provide clear, efficient, and well-commented code to help understand problem-solving approaches.
 Serve as a personal reference and learning resource for algorithmic problem-solving.
 
-**Repository Structure :**
-The solutions are organized by topic to make it easier to navigate and study specific areas of algorithms and data structures. The structure is as follows:
-Leetcode-Solutions/
-├── Arrays/
-├── Strings/
-├── LinkedLists/
-├── Trees/
-├── Graphs/
-├── Dynamic Programming/
-├── Recursion and Backtracking/
-├── Sorting And Searching/
-├── Maths/
-├── Bit Manipulation/
-└── README.md
-
-
-Each folder corresponds to a specific topic (e.g., Arrays, Strings, Dynamic Programming) and contains solutions to problems related to that topic. The file names typically include the problem name or number for easy identification.
-
 **Language Used**
 Solutions are written in :
 C++
